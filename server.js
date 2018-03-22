@@ -1,26 +1,34 @@
 // Get dependencies
 const express = require('express');
-const bodyParser = require('body-parser');
 const path = require('path');
 const http = require('http');
-const sgMail = require('@sendgrid/mail');
+const bodyParser = require('body-parser');
+
+const app = express();
+
+// Get our API routes
 const api = require('./server/routes/api');
-var app = express();
 
-
-app.use('/api', api);
-
+// Parsers for POST data
 app.use(bodyParser());
-app.use(bodyParser.json({limit:'5mb'}));
+app.use(bodyParser.json({limit:'100mb'}));
 app.use(bodyParser.urlencoded({extended:true}));
 
-app.use(express.static(__dirname+'/dist'));
+// Set our api routes
+app.use('/api', api);
 
+/**
+ * Get port from environment and store in Express.
+ */
+const port = process.env.PORT || '8080';
+app.set('port', port);
+
+/**
+ * Create HTTP server.
+ */
+const server = http.createServer(app);
+
+/**
+ * Listen on provided port, on all network interfaces.
+ */
 app.listen(process.env.PORT || 8080);
-
-//Path Location Strategy
-app.get('*', function (req, res) {
-    res.sendFile(path.join(__dirname, 'appclient/index.html'));
-});
-
-console.log('Console Listening');
