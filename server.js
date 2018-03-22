@@ -9,7 +9,6 @@ const path = require('path');
 
 // Set our api routes
 app.use('/api', api);
-app.use(express.static(__dirname+'/dist'));
 
 app.listen(process.env.PORT || 8080);
 
