@@ -2,26 +2,22 @@
 const bodyParser = require('body-parser');
 const sgMail = require('@sendgrid/mail');
 const api = require('./server/routes/api');
+
+
 const express = require('express');
-const http = require('http');
-const path = require('path');
 const app = express();
+const path = require('path');
 
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(__dirname+'/dist'));
 
-app.use('/api', api);
+app.listen(process.env.PORT||8080);
 
+//Path Location Strategy
 app.get('/', function(req, res) {
-    res.sendFile(path.join('/dist/index.html'));
+    res.sendFile(path.join(__dirname+'/dist/index.html'));
 });
 
-var port = process.env.PORT || 4300;
-app.set('port', port);
-
-const server = http.createServer(app);
-server.listen(port, function() {
-    console.log("App is running on port " + port);
-});
+console.log('Console Listening');
 
 
 /*app.use(bodyParser());
