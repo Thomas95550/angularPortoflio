@@ -10,7 +10,7 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class ProjectService {
 
-    private _postsURL = 'http://localhost:3000/api/project';
+    private _postsURL = 'https://porfolio-app.herokuapp.com/api/project';
     private headers = new Headers({'Content-Type': 'application/json'});
     private operationsUrl = 'http://60.60.60.100/api/operations';
     constructor(private http: Http) { }
