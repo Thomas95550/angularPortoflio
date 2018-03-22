@@ -14,7 +14,7 @@ app.listen(process.env.PORT || 8080);
 
 //Path Location Strategy
 app.get('*', function (req, res) {
-    const index = path.join(__dirname, 'dist', 'index.html');
+    const index = path.join(__dirname, 'appclient', 'index.html');
     res.sendFile(index);
 });
 
