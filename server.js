@@ -22,7 +22,7 @@ app.use(function (req, res, next) {
 // API location
 app.use('/api', api);
 
-app.use( express.static(__dirname + '/dist' ) );
+app.use( express.static(__dirname + '/appclient' ) );
 // Send all other requests to the Angular app
 app.get('*', function (req, res) {
     res.sendFile(path.join(__dirname, 'appclient/index.html'));
