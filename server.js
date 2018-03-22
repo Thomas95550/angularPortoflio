@@ -12,6 +12,12 @@ const api = require('./server/routes/api');
 // Set our api routes
 app.use('/api', api);
 
+
+app.get('*', function (req, res) {
+    const index = path.join(__dirname, 'appclient', 'index.html');
+    res.sendFile(index);
+});
+
 /**
  * Get port from environment and store in Express.
  */
