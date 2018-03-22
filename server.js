@@ -9,11 +9,6 @@ const app = express();
 // Get our API routes
 const api = require('./server/routes/api');
 
-// Parsers for POST data
-app.use(bodyParser());
-app.use(bodyParser.json({limit:'100mb'}));
-app.use(bodyParser.urlencoded({extended:true}));
-
 // Set our api routes
 app.use('/api', api);
 
