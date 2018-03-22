@@ -1,0 +1,117 @@
+#projectCard {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 32%;
+    height: 40vh;
+    outline: none;
+    cursor: pointer;
+
+    background-color: #ffffff;
+    position: absolute;
+    margin: auto;
+    top:0;
+    bottom:0;
+    display: block;
+
+
+
+    right: auto !important;
+
+    background-image: url('../../assets/img/parc-huile.jpg');
+    left: 0;
+    background-position: 20% 0;
+    background-color: #ffffff;
+}
+
+#aboutCard {
+    background-image: url('../../assets/img/camp-huile.jpg');
+    background-size: cover;
+    background-position: 20% 0;
+    background-repeat: no-repeat;
+    width: 32%;
+    height: 40vh;
+    outline: none;
+    cursor: pointer;
+
+    background-color: #ffffff;
+    position: absolute;
+    margin: auto;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    display: block;
+}
+#contactCard {
+    width: 32%;
+    height: 40vh;
+    outline: none;
+    cursor: pointer;
+
+    background-color: #ffffff;
+    position: absolute;
+    margin: auto;
+    top:0;
+    bottom:0;
+    display: block;
+
+    background-position: 20% 0;
+
+    background-image: url('../../assets/img/contact-huile.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    right: 0;
+}
+#projectCard,
+#contactCard,
+#aboutCard {
+    -webkit-transition: background-position 1.5s ease, bottom 1s ease;
+    -moz-transition: background-position 1.5s ease, bottom 1s ease;
+    -ms-transition: background-position 1.5s ease, bottom 1s ease;
+    -o-transition: background-position 1.5s ease, bottom 1s ease;
+    transition: background-position 1.5s ease, bottom 1s ease;
+}
+
+#projectCard:hover {
+    background-position: 100% 0;
+    bottom: 4em;
+}
+
+#aboutCard:hover {
+    background-position: 100% 0;
+    bottom: 4em;
+
+}
+#contactCard:hover{
+    background-position: 100% 0;
+    bottom: 4em;
+}
+
+.return {
+    color: white;
+    position: absolute;
+    width: auto;
+    height: 50px;
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+#allcardcontainer {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: block;
+    position: relative;
+}
+
+@media screen and (max-width: 500px) {
+    .return {
+        width: 45px;
+        writing-mode: vertical-rl;
+        text-orientation: sideways;
+    }
+}

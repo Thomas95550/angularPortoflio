@@ -1,0 +1,68 @@
+<div id="back-top" (click)="returnTop()">
+    <div class="square-return-top"><i class="fal fa-angle-double-up"></i></div>
+</div>
+
+<div class="text-cadre">
+    <div class="title-cadre center-align">
+        <img class="responsive-img" src="{{ _post?.img_logo }}" width="200px" alt="logo">
+        <p>{{_post?.title}}</p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12 xl12">
+                <div class="col s12 m12 xl6 text-project">
+                    <p style="white-space:pre-wrap;">{{_post?.society_presentation}}</p>
+                    <p style="white-space:pre-wrap;">{{_post?.society_developpement}}</p>
+                    <p style="white-space:pre-wrap;">{{_post?.society_technical}}</p>
+                    <p style="white-space:pre-wrap;">{{_post?.team_dev}}</p>
+                    <hr />
+                    <div class="center-align">
+                        <h4>Couleur</h4>
+                        <ul class="rounded-colored">
+                            <li [ngStyle]="{'background-color': _post?.primary_color}"></li>
+                            <li [ngStyle]="{'background-color': _post?.secondary_color}"></li>
+                            <li [ngStyle]="{'background-color': _post?.tertiary_color}"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col s12 m12 xl6" style="text-align: center;">
+                    <img class="responsive-img" src="{{ _post?.img_presentation }}" alt="">
+                </div>
+            </div>
+            <div class="col s12 m12 l12 xl12">
+                <div class="row" style="">
+                    <div class="col s12 m12 xl6" style="display: flex;">
+                        <img class="responsive-img" src="{{ _post?.img_one }}" alt="" style="margin: 0 auto">
+                    </div>
+                    <div id="image-project" class="col s12 m12 xl6">
+                        <div class="row">
+                            <div class="col s12 m6 xl6" style="display: flex;max-height: 400px;">
+                                <img class="responsive-img" src="{{ _post?.img_two }}" alt="" style="margin: 0 auto">
+                            </div>
+                            <div class="col s12 m6 xl6" style="display: flex;max-height: 400px;">
+                                <img class="responsive-img" src="{{ _post?.img_three }}" alt="" style="margin: 0 auto">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12" *ngIf="_post?.video_presentation || _post?.video_1245">
+                <div class="center-align">
+                    <h4>Média</h4>
+                </div>
+                <div class="col s12 m6 xl6">
+                    <video width="100%" height="auto" controls="controls">
+                        <source src="../../assets/video/presentation.mp4" type="video/mp4" />
+                        Ici l'alternative à la vidéo : un lien de téléchargement, un message, etc.
+                    </video>
+                </div>
+                <div class="col s12 m6 xl6">
+                    <video width="100%" height="auto" controls>
+                        <source src="../../assets/video/videoplayback.mp4" type="video/mp4" />
+                        Ici l'alternative à la vidéo : un lien de téléchargement, un message, etc.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

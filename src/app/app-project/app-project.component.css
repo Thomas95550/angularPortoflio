@@ -1,0 +1,113 @@
+.add-background {
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+    border: 1px solid #696969;
+    transition: all 1s ease;
+
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.center-add-project {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+}
+
+.add-cadre {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+    border: 1px solid #696969;
+    background-color: transparent;
+
+    transition: all 1s ease;
+}
+
+.add-background .ask-two {
+    opacity: 0.1;
+    transition: all 1s ease;
+}
+
+.add-background .ask-one {
+    opacity: 0.1;
+    transition: all 1s ease;
+}
+
+.add-background hr {
+    transition: all 1s ease;
+    width: 0;
+    height: 0;
+    color: #404040;
+    border: 0;
+}
+
+.add-background:hover hr {
+    height: 1px;
+    color: white;
+    width: 100%;
+    border: 1px solid white;
+}
+
+.add-background:hover .ask-one {
+    opacity: 1;
+    padding-bottom: 10px;
+}
+
+.add-background:hover .ask-two {
+    opacity: 1;
+    padding-top: 10px;
+}
+
+.add-background:hover {
+    border: 1px solid white;
+}
+.add-background:hover .add-cadre {
+    border: 1px solid white;
+}
+
+.background-cadre {
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main-cadre {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.text-cadre { }
+.title-cadre {
+
+}
+
+.text-cadre p {
+    font-style: italic;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: left;
+}

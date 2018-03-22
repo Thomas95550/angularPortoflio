@@ -1,0 +1,47 @@
+<div id="loader" style="min-height: 100vh;" app-loader>
+  <div class="container" style="height: 100%;">
+    <div class="row" style="margin: 0;">
+      <div class="col s12" style="height: 100vh;">
+        <span id="firstFillLoader" class="fillLoader-top fillLoader"></span>
+        <span id="secondFillLoader" class="fillLoader-bottom fillLoader"></span>
+        <div id="JSobjectProp" style="color: white;height: 20px;width: 100%; position: absolute;text-align: center;top: 0;bottom: 0;left: 0; right: 0;margin: auto;z-index: 9999 !important;">
+          <pre style="color: white;height: 20px;width: 100%; position: absolute;text-align: center;top: 150px;bottom: 0;left: 0; right: 0;margin: auto;"></pre>
+        </div>
+        <div id="keyframes" style="width: 10px;height: 10px;position: absolute;margin: auto;left: 0;top: 0;right: 0;bottom: 0;background-color: #fff;">
+          <div class="square el" style="width: 10px;height: 10px;position: absolute; margin: auto;left: 0;top: 0;right: 0;bottom: 0;background-color: #fff;"></div>
+          <div class="square elgauche" style="width: 10px;height: 10px;position: absolute; margin: auto;left: 0;top: 0;right: 0;bottom: 0;background-color: #fff;"></div>
+        </div>
+        <div class="center-text" style="height: 90px;width: 100%;position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto">
+          <div id="textName">
+            <p class="artiste" style="color: white;font-size: 70px;text-align: center;vertical-align: middle;height: 90px;width: 100%;position: absolute;top: 0;bottom: 0;left: 0;right: 0;margin: auto;display: block;z-index: 9999;">Bienvenue</p>
+          </div>
+        </div>
+        <div id="AllCardContainer" style="display: none;position: relative;width: 100%;height: 100%;top: 0;">
+          <a [routerLink]="routerLinkVariable" href="#" (click)="AnimationEl('projectCard')">
+            <div id="projectCard" href="#app-project" routerLinkActive="active" class="el-card">
+              <div style="height: 100%">
+                <h1 class="return">Projet</h1>
+              </div>
+            </div>
+          </a>
+          <a routerLink="/about" href="#" (click)="AnimationEl('aboutCard')">
+            <div id="aboutCard" href="#app-about-me" routerLinkActive="active" class="el-card">
+              <div style="height: 100%">
+                <h1 class="return about">Thomas</h1>
+              </div>
+            </div>
+          </a>
+          <a routerLink="/contact" href="#" (click)="AnimationEl('contactCard')">
+            <div id="contactCard" href="#app-contact" routerLinkActive="active" class="el-card">
+              <div style="height: 100%">
+                <h1 class="return">Contact</h1>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,31 @@
+<div id="app-project" style="min-height:100vh;color: white; width: 100%; text-align: center;height: 100%;">
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m4 l4 xl4" style="margin-top:  22px;" *ngFor="let post of _postsArray" appProject>
+        <div class="background-cadre" [routerLink]="['/project/', post._id]" (click)="Background()" [ngStyle]="{'background-image': 'url(' + post.img_background_project +')' }">
+          <div class="main-cadre" [ngStyle]="{'background-image': 'url(' + post.img_topbackground_project + ')'}">
+            <div class="text-cadre">
+              <div class="title-cadre">
+                <h4 style="text-shadow: #3e3c3c 1px 1px 10px;">{{post.title}}</h4>
+                <hr>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m4 l4 xl4" style="margin-top:  22px;">
+        <div class="add-background" [routerLink]="['/contact']">
+          <div class="add-cadre">
+            <div class="text-cadre center-add-project">
+              <div class="title-cadre">
+                <span class="ask-one" style="display: block">Seriez-vous mon,</span>
+                <hr />
+                <span class="ask-two" style="display:block;">prochain projet ?</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
