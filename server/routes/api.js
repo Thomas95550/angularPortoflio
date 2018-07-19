@@ -19,7 +19,7 @@ router.get('/', function(req, res) {
  *  GET Route "api/project"
  **/
 router.get('/project', function(req, res) {
-    MongoClient.connect('mongodb://thomas:blabla123456951@ds235328.mlab.com:35328/porfolio-angular', function(err, db) {
+    MongoClient.connect('mongodb://viewer:blabla123456951@ds235328.mlab.com:35328/porfolio-angular', function(err, db) {
         if (err) {
             throw err;
         }
